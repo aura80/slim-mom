@@ -1,0 +1,13 @@
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.logout-button {
+    margin-left: 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}

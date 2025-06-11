@@ -152,11 +152,7 @@
         z-index: 9;
     }
     .back-icon {
-        display: block;
-        width: 25px;
-        height: 25px;
-        cursor: pointer;
-        z-index: 20;
+        display: none;
     }
 }
 
@@ -165,7 +161,7 @@
         display: none;
     }
     .login-form {
-        z-index: 10;
+        z-index: 20;
     }
     .login-buttons {
         z-index: 10;
@@ -173,5 +169,18 @@
     .header-container-line {
         display: none;
     }
-
+    .back-icon {
+        display: block;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        z-index: 20;
+    }
+    .desktop-image {
+        display: block;
+    }
+    .fruits-desktop {
+        display: block;
+        z-index: 10;
+    }
 }

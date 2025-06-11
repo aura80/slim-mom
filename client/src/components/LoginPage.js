@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -18,7 +18,12 @@ import strawberry1x from "../assets/strawberry@1x.png";
 import strawberry2x from "../assets/strawberry@2x.png";
 import strawberry3x from "../assets/strawberry@3x.png";
 import strawberry4x from "../assets/strawberry@4x.png";
+import fruitsDesktop1x from "../assets/fruits-desktop@1x.png";
+import fruitsDesktop2x from "../assets/fruits-desktop@2x.png";
+import fruitsDesktop3x from "../assets/fruits-desktop@3x.png";
+import fruitsDesktop4x from "../assets/fruits-desktop@4x.png";
 import { loginUser } from "../utils/api";
+import { AuthContext } from "../context/AuthContext";
 import CloseArrow from "../assets/arrow.svg";
 import './LoginPage.css';
 
@@ -28,30 +33,36 @@ const validationSchema = Yup.object({
     .min(6, "Password must have at least 6 characters").required("Email is required"),
 });
 
-const handleLogin = async (values) => {
-  try {
-    const data = await loginUser(values);
-    console.log("Login success:", data);
-  } catch (error) {
-    console.error(error.message);
-  }
-};
 
 const LoginPage = () => {
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-      const formik = useFormik({
-        initialValues: {
-          name: "",
-          email: "",
-          password: "",
-        },
-        validationSchema,
-        onSubmit: handleLogin,
-      });
+  const { login } = useContext(AuthContext);
+  
+  const handleLogin = async (values, { resetForm }) => {
+    try {
+      const data = await loginUser(values);
+      login(data.user, data.token);
+      console.log("Login success:", data);
+      resetForm();
+      navigate("/userpage");
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
+
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      password: "",
+    },
+    validationSchema,
+    onSubmit: handleLogin,
+  });
     
-    return (
+  return (
       <div>
         <div className="header-container-line"></div>
         <img
@@ -115,23 +126,31 @@ const LoginPage = () => {
                 Register
               </button>
             </div>
-          </form>
-
-          <div className="tablet-image">
-            <img
-              src={banana1x}
-              srcSet={`${banana2x} 2x, ${banana3x} 3x, ${banana4x} 4x`}
-              alt="banana"
-              className="banana-image"
-            />
-            <img
+        </form>
+        
+        <div className="desktop-image">
+          <img
+            src={fruitsDesktop1x}
+            srcSet={`${fruitsDesktop2x} 2x, ${fruitsDesktop3x} 3x,${fruitsDesktop4x} 4x,`}
+            alt="fruits for desktop image"
+            className="fruits-desktop"
+          />
+        </div>
+        <div className="tablet-image">
+          <img
+            src={banana1x}
+            srcSet={`${banana2x} 2x, ${banana3x} 3x, ${banana4x} 4x`}
+            alt="banana"
+            className="banana-image"
+          />
+          <img
               src={wave1x}
               srcSet={`${wave2x} 2x, ${wave3x} 3x, ${wave4x} 4x`}
               alt="wave"
               className="wave-image"
             />
-            <img
-              src={strawberry1x}
+          <img
+            src={strawberry1x}
               srcSet={`${strawberry2x} 2x, ${strawberry3x} 3x, ${strawberry4x} 4x`}
               alt="strawberry"
               className="strawberry-image"
@@ -139,7 +158,7 @@ const LoginPage = () => {
           </div>
         </div>
       </div>
-    );
+  );
 };
 
 export default LoginPage;

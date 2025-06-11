@@ -3,7 +3,6 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-// const bodyParser = require('body-parser');
 
 const authRoutes = require('./routes/authRoutes');
 const productRoutes = require('./routes/productRoutes');
@@ -11,7 +10,8 @@ const journalRoutes = require('./routes/dailyEntryRoutes');
 const dailyIntakeRoutes = require('./routes/dailyIntakeRoutes');
 
 const app = express();
-app.use(cors());
+
+app.use(cors({ origin: "http://localhost:3000" }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

@@ -188,7 +188,6 @@ input[type="radio"]:checked + span {
 
 
 
-
 /* Responsive styles */
 @media (min-width: 320px) and (max-width: 767px) {
     .main-content h1 {
@@ -223,7 +222,6 @@ input[type="radio"]:checked + span {
 
 @media (min-width: 768px) {
     .main-content {
-        max-width: 800px;
         margin: 100px 32px auto 32px;
         max-width: 704px;
     }
@@ -371,13 +369,30 @@ input[type="radio"]:checked + span {
         flex-direction: row;
         justify-content: flex-end;
     }
-    /* .desktop-image {
+    .cta-button.tablet {
+        margin-left: 343px;
+        /* display: flex;
+        flex-direction: row;
+        justify-content: flex-end; */
+    }
+    .cta-button.mod {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }  
+    .desktop-image {
         display: block;
         width: 100%;
         height: 100vh;
-    } */
-    .cta-button {
-        margin-left: auto;
     }
-    
+    .fruits-desktop {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        z-index: 30000000;
+    }
 }

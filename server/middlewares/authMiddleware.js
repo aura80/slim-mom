@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 
-// Middleware to authenticate JWT token - async function
+// Middleware to authenticate JWT token    -   async
 const authMiddleware = (req, res, next) => {
     const token = req.headers['authorization']?.split(' ')[1]; // Get token from Authorization header
 
@@ -12,7 +12,7 @@ const authMiddleware = (req, res, next) => {
         if (err) {
             return res.status(403).json({ message: '❌ Invalid token' });
         }
-        // Payload put into the request object
+        // Payload put here into the request object
         req.user = decoded;
         next();
     });

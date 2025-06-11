@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './HomePage.css';
 import Header from '../components/Header';
 import leafs1x from '../assets/leafs@1x.png';
 import leafs2x from '../assets/leafs@2x.png';
@@ -18,7 +17,13 @@ import strawberry1x from "../assets/strawberry@1x.png";
 import strawberry2x from "../assets/strawberry@2x.png";
 import strawberry3x from "../assets/strawberry@3x.png";
 import strawberry4x from "../assets/strawberry@4x.png";
-import Modal from '../components/Modal';
+import fruitsDesktop1x from "../assets/fruits-desktop@1x.png";
+import fruitsDesktop2x from "../assets/fruits-desktop@2x.png";
+import fruitsDesktop3x from "../assets/fruits-desktop@3x.png";
+import fruitsDesktop4x from "../assets/fruits-desktop@4x.png";
+import { AuthContext } from "../context/AuthContext";
+import Modal from "../components/Modal";
+import "./HomePage.css";
 
 
 const HomePage = () => {
@@ -27,6 +32,8 @@ const HomePage = () => {
   const [weight, setWeight] = useState("");
   const [age, setAge] = useState("");
   const [bmr, setBmr] = useState(null);
+
+  const { isAuthenticated } = useContext(AuthContext);
 
   const navigate = useNavigate();
 
@@ -109,8 +116,12 @@ const HomePage = () => {
               className="cta-button tablet"
               onClick={(e) => {
                 e.preventDefault();
-                calculateBmr();
-                setIsModalOpen(true);
+                if (isAuthenticated) {
+                  navigate("/diary");
+                } else {
+                  calculateBmr();
+                  setIsModalOpen(true);
+                }
               }}
             >
               Start losing weight
@@ -118,6 +129,14 @@ const HomePage = () => {
           </div>
         </form>
       </main>
+      <div className="desktop-image">
+        <img
+          src={fruitsDesktop1x}
+          srcSet={`${fruitsDesktop2x} 2x, ${fruitsDesktop3x} 3x,${fruitsDesktop4x} 4x,`}
+          alt="fruits for desktop image"
+          className="fruits-desktop"
+        />
+      </div>
       <div className="tablet-image">
         <img
           src={leafs1x}
@@ -167,7 +186,7 @@ const HomePage = () => {
         </div>
         <div className="valid btn-modal">
           <button
-            className="cta-button"
+            className="cta-button mod"
             onClick={(e) => {
               e.preventDefault();
               navigate("/login");

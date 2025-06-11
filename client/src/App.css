@@ -7,6 +7,12 @@
   pointer-events: none;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -41,7 +47,11 @@
   display: none;
 }
 
-@media (min-width: 1024px) {
+.logo-text {
+  display: flex;
+}
+
+/* @media (min-width: 1024px) {
   .desktop-image {
       display: block;
       width: 100%;
@@ -57,4 +67,4 @@
       object-fit: cover;
       z-index: 10;
   }
-}
+} */

@@ -18,6 +18,10 @@ import strawberry1x from "../assets/strawberry@1x.png";
 import strawberry2x from "../assets/strawberry@2x.png";
 import strawberry3x from "../assets/strawberry@3x.png";
 import strawberry4x from "../assets/strawberry@4x.png";
+import fruitsDesktop1x from "../assets/fruits-desktop@1x.png";
+import fruitsDesktop2x from "../assets/fruits-desktop@2x.png";
+import fruitsDesktop3x from "../assets/fruits-desktop@3x.png";
+import fruitsDesktop4x from "../assets/fruits-desktop@4x.png";
 import { registerUser } from "../utils/api";
 import CloseArrow from "../assets/arrow.svg";
 import "./LoginPage.css";
@@ -136,6 +140,14 @@ const RegisterPage = () => {
           </div>
         </form>
 
+        <div className="desktop-image">
+          <img
+            src={fruitsDesktop1x}
+            srcSet={`${fruitsDesktop2x} 2x, ${fruitsDesktop3x} 3x,${fruitsDesktop4x} 4x,`}
+            alt="fruits for desktop image"
+            className="fruits-desktop"
+          />
+        </div>
         <div className="tablet-image">
           <img
             src={banana1x}

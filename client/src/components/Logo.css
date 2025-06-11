@@ -2,7 +2,6 @@
     /* text-decoration: none; */
     font-size: 14px;
     font-weight: bold;
-    /* color: #3498db; */
 }
 
 .logo-image {
@@ -24,7 +23,6 @@
 
     .logo-text {
         display: flex;
-        /* justify-content: center; */
         align-items: center;
     }
 
@@ -46,6 +44,7 @@
         left: 40px;
         bottom: -0.5px;
         display: flex;
+        pointer-events: none;
     }
 
 }

@@ -23,3 +23,7 @@ export async function registerUser({ name, email, password }) {
 
   return response.json();
 }
+
+export async function logoutUser() {
+  localStorage.removeItem("token");
+}

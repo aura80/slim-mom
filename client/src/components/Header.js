@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import Logo from "./Logo";
-// import UserInfo from "./UserInfo";
 // import Navigation from "./Navigation";
 // import burger from "../assets/burger.svg";
 import { AuthContext } from "../context/AuthContext";

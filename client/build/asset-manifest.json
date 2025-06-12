@@ -1,41 +1,15 @@
 {
   "files": {
-    "main.css": "/slim-mom/static/css/main.94604bf4.css",
-    "main.js": "/slim-mom/static/js/main.ded6c53e.js",
-    "static/js/453.419a5d54.chunk.js": "/slim-mom/static/js/453.419a5d54.chunk.js",
-    "static/media/fruits-desktop@4x.png": "/slim-mom/static/media/fruits-desktop@4x.68cddb520a6f2a919153.png",
-    "static/media/fruits-desktop@3x.png": "/slim-mom/static/media/fruits-desktop@3x.718971c08bce7d3b6697.png",
-    "static/media/fruits-desktop@2x.png": "/slim-mom/static/media/fruits-desktop@2x.87372e9a7fc1c014a98d.png",
-    "static/media/strawberry@4x.png": "/slim-mom/static/media/strawberry@4x.e50629918fb79bdd5e4d.png",
-    "static/media/banana@4x.png": "/slim-mom/static/media/banana@4x.8758f1d2ac200df9d69b.png",
-    "static/media/banana@3x.png": "/slim-mom/static/media/banana@3x.d7d44fa966902c20db03.png",
-    "static/media/strawberry@3x.png": "/slim-mom/static/media/strawberry@3x.1201fa410d2b9f4e2f8a.png",
-    "static/media/leafs2@4x.png": "/slim-mom/static/media/leafs2@4x.92bc1222ad610989b6fe.png",
-    "static/media/leafs@4x.png": "/slim-mom/static/media/leafs@4x.955843cfa2e90409e33f.png",
-    "static/media/leafs2@3x.png": "/slim-mom/static/media/leafs2@3x.f6d2150d314c75ee832f.png",
-    "static/media/banana@2x.png": "/slim-mom/static/media/banana@2x.539d44a042fe74506410.png",
-    "static/media/fruits-desktop@1x.png": "/slim-mom/static/media/fruits-desktop@1x.e263c249ed179070fc6e.png",
-    "static/media/strawberry@2x.png": "/slim-mom/static/media/strawberry@2x.a4f17f5c3271da620f80.png",
-    "static/media/leafs@3x.png": "/slim-mom/static/media/leafs@3x.1e6346ed8232268c3204.png",
-    "static/media/leafs2@2x.png": "/slim-mom/static/media/leafs2@2x.b654daafb81268100a0a.png",
-    "static/media/leafs@2x.png": "/slim-mom/static/media/leafs@2x.0925f7d0aeb9229311a4.png",
-    "static/media/banana@1x.png": "/slim-mom/static/media/banana@1x.0a1d20e06c029509f7ea.png",
-    "static/media/strawberry@1x.png": "/slim-mom/static/media/strawberry@1x.938d8d2e407df739661b.png",
-    "static/media/leafs2@1x.png": "/slim-mom/static/media/leafs2@1x.367a5539fcee560f9bd3.png",
-    "static/media/leafs@1x.png": "/slim-mom/static/media/leafs@1x.cbf739bc22f8106c5856.png",
-    "static/media/wave@4x.png": "/slim-mom/static/media/wave@4x.4e6081076e8690678c6b.png",
-    "static/media/wave@3x.png": "/slim-mom/static/media/wave@3x.432744975b69bd021e69.png",
-    "static/media/wave@2x.png": "/slim-mom/static/media/wave@2x.c66f085e59b0785b5db6.png",
-    "index.html": "/slim-mom/index.html",
-    "static/media/X.svg": "/slim-mom/static/media/X.fa80e5d443181da90392d894bf5c8cca.svg",
-    "static/media/burger.svg": "/slim-mom/static/media/burger.01ceca229b24b279f59f37239441a808.svg",
-    "static/media/arrow.svg": "/slim-mom/static/media/arrow.24ce6b342eecfc3ce7e0b459a70fddbb.svg",
-    "main.94604bf4.css.map": "/slim-mom/static/css/main.94604bf4.css.map",
-    "main.ded6c53e.js.map": "/slim-mom/static/js/main.ded6c53e.js.map",
-    "453.419a5d54.chunk.js.map": "/slim-mom/static/js/453.419a5d54.chunk.js.map"
+    "main.css": "https://aura80.github.io/slim-mom/static/css/main.e7251801.css",
+    "main.js": "https://aura80.github.io/slim-mom/static/js/main.50b8d38d.js",
+    "static/js/453.419a5d54.chunk.js": "https://aura80.github.io/slim-mom/static/js/453.419a5d54.chunk.js",
+    "index.html": "https://aura80.github.io/slim-mom/index.html",
+    "main.e7251801.css.map": "https://aura80.github.io/slim-mom/static/css/main.e7251801.css.map",
+    "main.50b8d38d.js.map": "https://aura80.github.io/slim-mom/static/js/main.50b8d38d.js.map",
+    "453.419a5d54.chunk.js.map": "https://aura80.github.io/slim-mom/static/js/453.419a5d54.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.94604bf4.css",
-    "static/js/main.ded6c53e.js"
+    "static/css/main.e7251801.css",
+    "static/js/main.50b8d38d.js"
   ]
 }

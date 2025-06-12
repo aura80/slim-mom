@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Logo from "./Logo";
 // import UserInfo from "./UserInfo";
 // import Navigation from "./Navigation";

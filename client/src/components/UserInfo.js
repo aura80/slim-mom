@@ -1,8 +1,8 @@
 import React, { useContext, useState, useEffect } from "react";
-import { data, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { logoutUser } from "../utils/api";
-import HomePage from "../pages/HomePage";
+// import HomePage from "../pages/HomePage";
 import "../pages/HomePage.css";
 import "./UserInfo.css";
 
@@ -39,7 +39,7 @@ const UserInfo = () => {
           const today = new Date();
           // const date = today.toISOString().split("T")[0];
           const date = today.toISOString().slice(0, 10);
-          const [year, month, day] = date.split("-");
+          // const [year, month, day] = date.split("-");
           const token = localStorage.getItem("token");
 
 

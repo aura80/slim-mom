@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -140,7 +140,7 @@ const LoginPage = () => {
           // srcSet="/slim-mom/assets/fruits-desktop@2x.png 2x, /slim-mom/assets/fruits-desktop@3x.png 3x, /slim-mom/assets/fruits-desktop@4x.png 4x"
           // src={fruitsDesktop1x}
           // srcSet={`${fruitsDesktop2x} 2x, ${fruitsDesktop3x} 3x,${fruitsDesktop4x} 4x,`}
-          alt="fruits for desktop image"
+          alt="fruits for desktop"
           className="fruits-desktop fruit"
         />
         {/* </div> */}

@@ -3,7 +3,7 @@ import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import Logo from "./Logo";
 import UserInfo from "./UserInfo";
 import Navigation from "./Navigation";
-import burger from "../assets/burger.svg";
+// import burger from "../assets/burger.svg";
 import { AuthContext } from "../context/AuthContext";
 import { logout } from "../context/AuthContext";
 import { logoutUser } from "../utils/api";
@@ -66,7 +66,12 @@ const Header = () => {
             )}
             {isAuthenticated && (
               <button className="burger-btn" onClick={handleBurgerClick}>
-                <img src={burger} alt="Burger Button" className="burger" />
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/burger.svg`}
+                  // src={"/slim-mom/assets/burger.svg"}
+                  alt="Burger Button"
+                  className="burger"
+                />
               </button>
             )}
 

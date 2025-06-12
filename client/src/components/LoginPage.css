@@ -176,9 +176,9 @@
         cursor: pointer;
         z-index: 20;
     }
-    .desktop-image {
+    /* .desktop-image {
         display: block;
-    }
+    } */
     .fruits-desktop {
         display: block;
         z-index: 10;

@@ -1,17 +1,18 @@
 // import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import HomePage from './pages/HomePage';
 import Loader from './components/Loader';
 import LoginPage from './components/LoginPage';
 import RegisterPage from "./components/RegisterPage";
 import UserPage from "./components/UserPage";
-import fruitsDesktop1x from "./assets/fruits-desktop@1x.png";
-import fruitsDesktop2x from "./assets/fruits-desktop@2x.png";
-import fruitsDesktop3x from "./assets/fruits-desktop@3x.png";
-import fruitsDesktop4x from "./assets/fruits-desktop@4x.png";
+// import fruitsDesktop1x from "./assets/fruits-desktop@1x.png";
+// import fruitsDesktop2x from "./assets/fruits-desktop@2x.png";
+// import fruitsDesktop3x from "./assets/fruits-desktop@3x.png";
+// import fruitsDesktop4x from "./assets/fruits-desktop@4x.png";
 // import './pages/HomePage.css';
 
 function App() {

@@ -1,26 +1,26 @@
 import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
-import leafs1x from '../assets/leafs@1x.png';
-import leafs2x from '../assets/leafs@2x.png';
-import leafs3x from '../assets/leafs@3x.png';
-import leafs4x from '../assets/leafs@4x.png';
-import banana1x from "../assets/banana@1x.png";
-import banana2x from "../assets/banana@2x.png";
-import banana3x from "../assets/banana@3x.png";
-import banana4x from "../assets/banana@4x.png";
-import wave1x from "../assets/wave@1x.png";
-import wave2x from "../assets/wave@2x.png";
-import wave3x from "../assets/wave@3x.png";
-import wave4x from "../assets/wave@4x.png";
-import strawberry1x from "../assets/strawberry@1x.png";
-import strawberry2x from "../assets/strawberry@2x.png";
-import strawberry3x from "../assets/strawberry@3x.png";
-import strawberry4x from "../assets/strawberry@4x.png";
-import fruitsDesktop1x from "../assets/fruits-desktop@1x.png";
-import fruitsDesktop2x from "../assets/fruits-desktop@2x.png";
-import fruitsDesktop3x from "../assets/fruits-desktop@3x.png";
-import fruitsDesktop4x from "../assets/fruits-desktop@4x.png";
+// import leafs1x from '../assets/leafs@1x.png';
+// import leafs2x from '../assets/leafs@2x.png';
+// import leafs3x from '../assets/leafs@3x.png';
+// import leafs4x from '../assets/leafs@4x.png';
+// import banana1x from "../assets/banana@1x.png";
+// import banana2x from "../assets/banana@2x.png";
+// import banana3x from "../assets/banana@3x.png";
+// import banana4x from "../assets/banana@4x.png";
+// import wave1x from "../assets/wave@1x.png";
+// import wave2x from "../assets/wave@2x.png";
+// import wave3x from "../assets/wave@3x.png";
+// import wave4x from "../assets/wave@4x.png";
+// import strawberry1x from "../assets/strawberry@1x.png";
+// import strawberry2x from "../assets/strawberry@2x.png";
+// import strawberry3x from "../assets/strawberry@3x.png";
+// import strawberry4x from "../assets/strawberry@4x.png";
+// import fruitsDesktop1x from "../assets/fruits-desktop@1x.png";
+// import fruitsDesktop2x from "../assets/fruits-desktop@2x.png";
+// import fruitsDesktop3x from "../assets/fruits-desktop@3x.png";
+// import fruitsDesktop4x from "../assets/fruits-desktop@4x.png";
 import { AuthContext } from "../context/AuthContext";
 import Modal from "../components/Modal";
 import "./HomePage.css";
@@ -129,36 +129,56 @@ const HomePage = () => {
           </div>
         </form>
       </main>
-      <div className="desktop-image">
-        <img
-          src={fruitsDesktop1x}
-          srcSet={`${fruitsDesktop2x} 2x, ${fruitsDesktop3x} 3x,${fruitsDesktop4x} 4x,`}
-          alt="fruits for desktop image"
-          className="fruits-desktop"
-        />
-      </div>
+      {/* <div className="desktop-image"> */}
+      <img
+        src={`${process.env.PUBLIC_URL}/assets/fruits-desktop@1x.png`}
+        srcSet={`${process.env.PUBLIC_URL}/assets/fruits-desktop@2x.png 2x, ${process.env.PUBLIC_URL}/assets/fruits-desktop@3x.png 3x, ${process.env.PUBLIC_URL}/assets/fruits-desktop@4x.png 4x`}
+        // src={"/slim-mom/assets/leafs2@1x.png"}
+        // srcSet="/slim-mom/assets/leafs2@2x.png 2x, /slim-mom/assets/leafs2@3x.png 3x, /slim-mom/assets/leafs2@4x.png 4x"
+        // src={fruitsDesktop1x}
+        // srcSet={`${fruitsDesktop2x} 2x, ${fruitsDesktop3x} 3x,${fruitsDesktop4x} 4x,`}
+        alt="fruits for desktop image"
+        className="fruits-desktop"
+      />
+      {/* </div> */}
       <div className="tablet-image">
         <img
-          src={leafs1x}
-          srcSet={`${leafs2x} 2x, ${leafs3x} 3x, ${leafs4x} 4x`}
+          src={`${process.env.PUBLIC_URL}/assets/leafs@1x.png`}
+          srcSet={`${process.env.PUBLIC_URL}/assets/leafs@2x.png 2x, ${process.env.PUBLIC_URL}/assets/leafs@3x.png 3x, ${process.env.PUBLIC_URL}/assets/leafs@4x.png 4x`}
+          // src={"/slim-mom/assets/leafs@1x.png"}
+          // srcSet="/slim-mom/assets/leafs@2x.png 2x, /slim-mom/assets/leafs@3x.png 3x, /slim-mom/assets/leafs@4x.png 4x"
+          // src={leafs1x}
+          // srcSet={`${leafs2x} 2x, ${leafs3x} 3x, ${leafs4x} 4x`}
           alt="leafs"
           className="leafs-image"
         />
         <img
-          src={banana1x}
-          srcSet={`${banana2x} 2x, ${banana3x} 3x, ${banana4x} 4x`}
+          src={`${process.env.PUBLIC_URL}/assets/banana@1x.png`}
+          srcSet={`${process.env.PUBLIC_URL}/assets/banana@2x.png 2x, ${process.env.PUBLIC_URL}/assets/banana@3x.png 3x, ${process.env.PUBLIC_URL}/assets/banana@4x.png 4x`}
+          // src={"/slim-mom/assets/banana@1x.png"}
+          // srcSet="/slim-mom/assets/banana@2x.png 2x, /slim-mom/assets/banana@3x.png 3x, /slim-mom/assets/banana@4x.png 4x"
+          // src={banana1x}
+          // srcSet={`${banana2x} 2x, ${banana3x} 3x, ${banana4x} 4x`}
           alt="banana"
           className="banana-image"
         />
         <img
-          src={wave1x}
-          srcSet={`${wave2x} 2x, ${wave3x} 3x, ${wave4x} 4x`}
+          src={`${process.env.PUBLIC_URL}/assets/wave@1x.png`}
+          srcSet={`${process.env.PUBLIC_URL}/assets/wave@2x.png 2x, ${process.env.PUBLIC_URL}/assets/wave@3x.png 3x, ${process.env.PUBLIC_URL}/assets/wave@4x.png 4x`}
+          // src={"/slim-mom/assets/wave@1x.png"}
+          // srcSet="/slim-mom/assets/wave@2x.png 2x, /slim-mom/assets/wave@3x.png 3x, /slim-mom/assets/wave@4x.png 4x"
+          // src={wave1x}
+          // srcSet={`${wave2x} 2x, ${wave3x} 3x, ${wave4x} 4x`}
           alt="wave"
           className="wave-image"
         />
         <img
-          src={strawberry1x}
-          srcSet={`${strawberry2x} 2x, ${strawberry3x} 3x, ${strawberry4x} 4x`}
+          src={`${process.env.PUBLIC_URL}/assets/strawberry@1x.png`}
+          srcSet={`${process.env.PUBLIC_URL}/assets/strawberry@2x.png 2x, ${process.env.PUBLIC_URL}/assets/strawberry@3x.png 3x, ${process.env.PUBLIC_URL}/assets/strawberry@4x.png 4x`}
+          // src={"/slim-mom/assets/strawberry@1x.png"}
+          // srcSet="/slim-mom/assets/strawberry@2x.png 2x, /slim-mom/assets/strawberry@3x.png 3x, /slim-mom/assets/strawberry@4x.png 4x"
+          // src={strawberry1x}
+          // srcSet={`${strawberry2x} 2x, ${strawberry3x} 3x, ${strawberry4x} 4x`}
           alt="strawberry"
           className="strawberry-image"
         />

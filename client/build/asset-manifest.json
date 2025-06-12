@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/slim-mom/static/css/main.eb9ff058.css",
-    "main.js": "/slim-mom/static/js/main.2dc571d8.js",
+    "main.css": "/slim-mom/static/css/main.94604bf4.css",
+    "main.js": "/slim-mom/static/js/main.ded6c53e.js",
     "static/js/453.419a5d54.chunk.js": "/slim-mom/static/js/453.419a5d54.chunk.js",
     "static/media/fruits-desktop@4x.png": "/slim-mom/static/media/fruits-desktop@4x.68cddb520a6f2a919153.png",
     "static/media/fruits-desktop@3x.png": "/slim-mom/static/media/fruits-desktop@3x.718971c08bce7d3b6697.png",
@@ -26,17 +26,16 @@
     "static/media/wave@4x.png": "/slim-mom/static/media/wave@4x.4e6081076e8690678c6b.png",
     "static/media/wave@3x.png": "/slim-mom/static/media/wave@3x.432744975b69bd021e69.png",
     "static/media/wave@2x.png": "/slim-mom/static/media/wave@2x.c66f085e59b0785b5db6.png",
-    "static/media/logo-slim.svg": "/slim-mom/static/media/logo-slim.7f71bfa11d039971dd637fa84dc03174.svg",
-    "static/media/logo-mom.svg": "/slim-mom/static/media/logo-mom.827f3d1c6c85a573fc4c945da6440651.svg",
     "index.html": "/slim-mom/index.html",
     "static/media/X.svg": "/slim-mom/static/media/X.fa80e5d443181da90392d894bf5c8cca.svg",
+    "static/media/burger.svg": "/slim-mom/static/media/burger.01ceca229b24b279f59f37239441a808.svg",
     "static/media/arrow.svg": "/slim-mom/static/media/arrow.24ce6b342eecfc3ce7e0b459a70fddbb.svg",
-    "main.eb9ff058.css.map": "/slim-mom/static/css/main.eb9ff058.css.map",
-    "main.2dc571d8.js.map": "/slim-mom/static/js/main.2dc571d8.js.map",
+    "main.94604bf4.css.map": "/slim-mom/static/css/main.94604bf4.css.map",
+    "main.ded6c53e.js.map": "/slim-mom/static/js/main.ded6c53e.js.map",
     "453.419a5d54.chunk.js.map": "/slim-mom/static/js/453.419a5d54.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eb9ff058.css",
-    "static/js/main.2dc571d8.js"
+    "static/css/main.94604bf4.css",
+    "static/js/main.ded6c53e.js"
   ]
 }

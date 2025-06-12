@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./Modal.css";
-import CloseArrow from "../assets/arrow.svg";
-import XIcon from "../assets/X.svg";
+// import CloseArrow from "../assets/arrow.svg";
+// import XIcon from "../assets/X.svg";
 
 const Modal = ({ isOpen, onClose, children }) => {
     useEffect(() => {
@@ -40,7 +40,7 @@ const Modal = ({ isOpen, onClose, children }) => {
         <div className="modal-content" onClick={(e) => e.stopPropagation()}>
           <div className="arrow-container">
             <img
-              src={CloseArrow}
+              src={`${process.env.PUBLIC_URL}/assets/arrow.svg`}
               alt="Close Modal Arrow"
               className="close-icon"
               onClick={onClose}
@@ -48,7 +48,7 @@ const Modal = ({ isOpen, onClose, children }) => {
           </div>
           <div className="x-container">
             <img
-              src={XIcon}
+              src={`${process.env.PUBLIC_URL}/assets/X.svg`}
               alt="Close Modal X"
               className="close-icon-x"
               onClick={onClose}

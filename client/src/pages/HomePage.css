@@ -380,19 +380,20 @@ input[type="radio"]:checked + span {
         flex-direction: row;
         justify-content: center;
     }  
-    .desktop-image {
+    /* .desktop-image {
         display: block;
         width: 100%;
         height: 100vh;
-    }
+    } */
     .fruits-desktop {
         display: block;
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         width: 100%;
         height: 100vh;
         object-fit: cover;
         z-index: 30000000;
+        pointer-events: none;
     }
 }

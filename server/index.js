@@ -11,7 +11,9 @@ const dailyIntakeRoutes = require('./routes/dailyIntakeRoutes');
 
 const app = express();
 
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(
+  cors({ origin: ["http://localhost:3000", "https://aura80.github.io"] })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

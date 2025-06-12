@@ -5,7 +5,7 @@ import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import HomePage from './pages/HomePage';
-import Loader from './components/Loader';
+// import Loader from './components/Loader';
 import LoginPage from './components/LoginPage';
 import RegisterPage from "./components/RegisterPage";
 import UserPage from "./components/UserPage";

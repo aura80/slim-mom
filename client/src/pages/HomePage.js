@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Header from '../components/Header';
 // import leafs1x from '../assets/leafs@1x.png';
 // import leafs2x from '../assets/leafs@2x.png';
 // import leafs3x from '../assets/leafs@3x.png';
@@ -137,7 +136,7 @@ const HomePage = () => {
         // srcSet="/slim-mom/assets/leafs2@2x.png 2x, /slim-mom/assets/leafs2@3x.png 3x, /slim-mom/assets/leafs2@4x.png 4x"
         // src={fruitsDesktop1x}
         // srcSet={`${fruitsDesktop2x} 2x, ${fruitsDesktop3x} 3x,${fruitsDesktop4x} 4x,`}
-        alt="fruits for desktop image"
+        alt="fruits for desktop"
         className="fruits-desktop"
       />
       {/* </div> */}

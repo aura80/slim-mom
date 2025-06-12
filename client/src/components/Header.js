@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import Logo from "./Logo";
-import UserInfo from "./UserInfo";
-import Navigation from "./Navigation";
+// import UserInfo from "./UserInfo";
+// import Navigation from "./Navigation";
 // import burger from "../assets/burger.svg";
 import { AuthContext } from "../context/AuthContext";
-import { logout } from "../context/AuthContext";
+// import { logout } from "../context/AuthContext";
 import { logoutUser } from "../utils/api";
 import "./Header.css";
 
@@ -14,7 +14,7 @@ const Header = () => {
     const { user } = useContext(AuthContext);
     const [menuOpen, setMenuOpen] = useState(false);
 
-    const location = useLocation();
+    // const location = useLocation();
     const navigate = useNavigate();
     
     const handleBurgerClick = () => {

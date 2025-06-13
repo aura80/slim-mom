@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 // import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import HomePage from './pages/HomePage';
@@ -16,7 +16,7 @@ import UserPage from "./components/UserPage";
 
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <>
       {/* <div className="desktop-image">
           <img
             src={fruitsDesktop1x}
@@ -33,7 +33,7 @@ function App() {
         <Route path="/userpage" element={<UserPage />} />
       </Routes>
       {/* </div> */}
-    </Router>
+    </>
   );
 }
 

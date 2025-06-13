@@ -1,0 +1,399 @@
+body {
+    font-family: "Verdana", sans-serif;
+    color: #333;
+    margin: 0;
+}
+
+.home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.header-container {
+    width: 100%;    
+    height: 2px;
+    display: flex;
+    background-color: #E0E0E0;
+}
+
+.main-content {
+    margin-top: 32px;
+    padding: 20px;
+    max-width: 600px;
+    margin-right: 20px;
+}
+
+.main-content h1 {
+    font-family: Verdana;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: left;
+    line-height: 140%;
+    letter-spacing: 0%;
+    color: #212121;
+    margin-bottom: 34px;
+}
+
+.cta-button {
+    font-family: Verdana;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 4%;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgba(252, 132, 45, 1);
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    font-size: 14px;
+    min-width: 210px;
+    border-radius: 6px;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #0ead4d;
+    box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-field {
+    width: 240px;
+    font-family: Verdana;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 4%;
+    padding: 10px 10px 10px 0;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #7c7d7f;
+    margin-bottom: 32px;
+}
+
+.input-field:focus {
+    border-bottom: 2px solid #1a8989;
+    outline: none;
+}
+
+.blood-type-label {
+    font-family: Verdana;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 4%;
+    color: #9B9FAA;
+    text-align: left;
+    padding-bottom: 8px;
+}
+
+.radio-group {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.radio-group label {
+    font-family: Verdana;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 4%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 24px;
+}
+
+input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: 2px solid #E0E0E0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+input[type="radio"]:checked::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    background-color: #FC842D;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+}
+
+input[type="radio"]:checked + span {
+    color: #FC842D;
+    font-weight: bold;
+}
+
+.intake {
+    margin: 40px 20px 40px 20px;
+    text-align: left;
+    font-family: Verdana;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0%;
+}
+
+.valid {
+    text-align: center;
+}
+
+.noteat {
+    padding-left: 20px;
+}
+
+.horizontal-line {
+    display: flex;
+    margin: 32px 20px 20px 20px;
+    min-width: 280px;
+    height: 2px;
+    background-color: #E0E0E0;
+}
+
+.bmr {
+    font-family: Verdana;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 100%;
+    letter-spacing: 4%;
+    text-align: center;
+}
+
+
+
+
+/* Responsive styles */
+@media (min-width: 320px) and (max-width: 767px) {
+    .main-content h1 {
+        font-size: 5vw;
+    }
+    .input-field .radio-group {
+        max-width: 5vw;
+    }
+    .blood-type-label {
+        text-align: left;
+    }
+    .column-right, .column-left {
+        display: flex;
+        flex-direction: column;
+    }
+    .tablet-image {
+        display: none;
+    }
+    .btn-modal {
+        margin-top: 40px;
+    }
+    .cta-button {
+        width: 210px;
+    }
+    .modal-foods {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .main-content {
+        margin: 100px 32px auto 32px;
+        max-width: 704px;
+    }
+    .main-content h1 {
+        font-family: Verdana;
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 140%;
+        letter-spacing: 0%;
+        width: 704px;
+        padding-bottom: 60px;
+    }
+    .cta-button {
+        width: 210px;
+        margin-top: 28px;
+    }
+    .cta-button.tablet {
+        position: relative;
+        display: flex;
+        z-index: 9990;
+    }
+    .input-field {
+        min-width: 240px;
+    }
+    .form-container-tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        column-gap: 30px;
+        max-width: 500px;
+    }
+    .column-right, .column-left {
+        display: flex;
+        flex-direction: column;
+    }
+    .wave-image {
+        display: flex;
+        position: absolute;
+        bottom: -55px;
+        right: 0;
+        width: 90%;
+        max-width: 523px;
+        margin-top: 350px;
+        z-index: 0;
+    }
+    .leafs-image {
+        display: flex;
+        position: absolute;
+        bottom: -30px;
+        left: 6px;
+        max-width: 731px;
+        z-index: 1;
+    }
+    .banana-image {
+        display: flex;
+        position: absolute;
+        bottom: -50px;
+        right: 0;
+        max-width: 480px;
+        z-index: 2;
+    }
+    .strawberry-image {
+        display: flex;
+        position: absolute;
+        bottom: 125px;
+        right: 65px;
+        max-width: 278px;
+        z-index: 3;
+    }
+    .tablet-image {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 320px;
+    } 
+    .intake {
+        width: 500px;
+        font-family: Verdana;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 140%;
+        letter-spacing: 0%;
+        text-align: center;
+        margin: 44px 0 20px 0;
+    }
+    .btn-modal.cta-button {
+        margin-top: 40px;
+    }
+    li {
+        font-family: Verdana;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 4%;
+    }
+    .noteat {
+        font-family: Verdana;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 4%;
+    }
+    .horizontal-line {
+        display: flex;
+        margin: 32px 0 12px 0;
+        min-width: 280px;
+    }
+    .modal-foods {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 47%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .home-page {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        z-index: 20;
+    }
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin-left: 16px;
+        position: relative;
+        z-index: 30;
+    }
+    .main-content h1 {
+        font-size: 34px;
+        width: 608px;
+    }
+    .header-container {
+        display: none;
+    }
+    .tablet-image {
+        display: none;
+    }
+    .form-container button {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .cta-button.tablet {
+        margin-left: 343px;
+        /* display: flex;
+        flex-direction: row;
+        justify-content: flex-end; */
+    }
+    .cta-button.mod {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }  
+    /* .desktop-image {
+        display: block;
+        width: 100%;
+        height: 100vh;
+    } */
+    .fruits-desktop {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        z-index: 30000000;
+        pointer-events: none;
+    }
+}

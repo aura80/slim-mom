@@ -1,0 +1,66 @@
+.logo {
+    /* text-decoration: none; */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.logo-image {
+    width: 46.67px;
+    height: 44px;
+    top: 20px;
+    left: 20px;
+}
+
+.logo-text {
+    display: none;
+}
+
+.logo-slim {
+    width: 48.18px;
+    height: auto;
+}
+
+.logo-mom {
+    width: 53.6px;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .logo-bar {
+        display: flex;
+        column-gap: 10.33px;
+    }
+
+    .logo-text {
+        display: flex;
+        align-items: center;
+    }
+
+    /* .logo-slim, .logo-mom {
+        width: 52.51px;
+        height: 15.41px;
+    } */
+}
+
+@media (min-width: 1024px) {
+    .logo {
+        display: block;
+        width: 167px;
+        height: auto;
+    }
+    .logo-bar {
+       position: relative; 
+       display: flex;
+       align-items: center;
+       column-gap: 0;
+    }
+    .logo-text {
+        margin-right: 20px;  
+        position: absolute;
+        left: 40px;
+        bottom: -0.5px;
+        display: flex;
+        /* pointer-events: none; */
+    }
+
+}

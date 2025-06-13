@@ -1,8 +1,11 @@
-import { apiUrl } from '../config';
+// import { apiUrl } from '../config';
+const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000";
 
 const API_LOGIN_URL = `${apiUrl}/api/auth`;
 
 export async function loginUser({ email, password }) {
+  console.log("API URL:", process.env.REACT_APP_API_URL);
+  
     const response = await fetch(`${API_LOGIN_URL}/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

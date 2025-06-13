@@ -18,22 +18,22 @@ import UserPage from "./components/UserPage";
 function App() {
   return (
     <Router>
-      {/* <div className="desktop-image">
-        <img
-          src={fruitsDesktop1x}
-          srcSet={`${fruitsDesktop2x} 2x, ${fruitsDesktop3x} 3x,${fruitsDesktop4x} 4x,`}
-          alt="fruits for desktop image"
-          className="fruits-desktop"
-        /> */}
+        {/* <div className="desktop-image">
+          <img
+            src={fruitsDesktop1x}
+            srcSet={`${fruitsDesktop2x} 2x, ${fruitsDesktop3x} 3x,${fruitsDesktop4x} 4x,`}
+            alt="fruits for desktop image"
+            className="fruits-desktop"
+          /> */}
         <Header />
 
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
-          <Route path='/userpage' element={<UserPage />} />
+          <Route path="/userpage" element={<UserPage />} />
         </Routes>
-      {/* </div> */}
+        {/* </div> */}
     </Router>
   );
 }

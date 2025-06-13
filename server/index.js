@@ -12,7 +12,13 @@ const dailyIntakeRoutes = require('./routes/dailyIntakeRoutes');
 const app = express();
 
 app.use(
-  cors({ origin: ["http://localhost:3000", "https://aura80.github.io"] })
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://aura80.github.io",
+,      "https://aura80.github.io/slim-mom",
+    ],
+  })
 );
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

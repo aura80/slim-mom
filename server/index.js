@@ -16,7 +16,7 @@ app.use(
     origin: [
       "http://localhost:3000",
       "https://aura80.github.io",
-,      "https://aura80.github.io/slim-mom",
+      "https://aura80.github.io/slim-mom",
     ],
   })
 );

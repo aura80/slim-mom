@@ -8,6 +8,12 @@ const authRoutes = require('./routes/authRoutes');
 const productRoutes = require('./routes/productRoutes');
 const journalRoutes = require('./routes/dailyEntryRoutes');
 const dailyIntakeRoutes = require('./routes/dailyIntakeRoutes');
+const path = require("path");
+
+
+const MONGO_URI =
+  process.env.MONGO_URI ||
+  "mongodb+srv://auradragan80:test@cluster0.0i5ioj4.mongodb.net/slim-mom-db";
 
 const app = express();
 
@@ -27,6 +33,7 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+
 app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/journal', journalRoutes);
@@ -35,7 +42,7 @@ app.use('/api/daily-intake', dailyIntakeRoutes);
 // Define the port
 const PORT = process.env.PORT || 5000;
 // Define the MongoDB URI
-const MONGO_URI = process.env.MONGO_URI;  //  || 'mongodb://localhost:27017/slim-mom'
+// const MONGO_URI = process.env.MONGO_URI;  //  || 'mongodb://localhost:27017/slim-mom'
 
 // Connect to MongoDB
 mongoose.connect(MONGO_URI)
@@ -44,6 +51,13 @@ mongoose.connect(MONGO_URI)
 
 app.get('/', (req, res) => {
     res.send('Welcome to Slim Mom API - server works!');
+});
+
+// Serve static files from React build
+app.use(express.static(path.join(__dirname, "build")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
 app.listen(PORT, () => console.log(`🚀 Server is running on http://localhost:${PORT}`));

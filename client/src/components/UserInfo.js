@@ -44,10 +44,10 @@ const UserInfo = () => {
 
 
           const response = await fetch(
-            `http://localhost:5000/api/daily-intake/summary?weight=${weight}&height=${height}&age=${age}&bloodGroup=${bloodGroup}&date=${date}`
-            ,{
+            `${process.env.REACT_APP_API_URL}/api/daily-intake/summary?weight=${weight}&height=${height}&age=${age}&bloodGroup=${bloodGroup}&date=${date}`,
+            {
               headers: {
-                "Authorization": token ? `Bearer ${token}` : undefined,
+                Authorization: token ? `Bearer ${token}` : undefined,
               },
             }
           );

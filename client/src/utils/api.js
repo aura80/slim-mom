@@ -1,4 +1,4 @@
-const API_LOGIN_URL = "http://localhost:5000/api/auth";
+const API_LOGIN_URL = `${process.env.REACT_APP_API_URL}/api/auth`;
 
 export async function loginUser({ email, password }) {
     const response = await fetch(`${API_LOGIN_URL}/login`, {

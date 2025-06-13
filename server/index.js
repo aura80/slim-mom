@@ -18,6 +18,7 @@ app.use(
       "https://aura80.github.io",
       "https://aura80.github.io/slim-mom",
     ],
+    credentials: true,
   })
 );
 app.use(express.json());

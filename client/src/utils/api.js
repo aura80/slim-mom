@@ -1,4 +1,6 @@
-const API_LOGIN_URL = `${process.env.REACT_APP_API_URL}/api/auth`;
+import { apiUrl } from '../config';
+
+const API_LOGIN_URL = `${apiUrl}/api/auth`;
 
 export async function loginUser({ email, password }) {
     const response = await fetch(`${API_LOGIN_URL}/login`, {

@@ -16,7 +16,7 @@ import UserPage from "./components/UserPage";
 
 function App() {
   return (
-    <Router basename="/slim-mom">
+    <Router basename={process.env.PUBLIC_URL}>
       {/* <div className="desktop-image">
           <img
             src={fruitsDesktop1x}

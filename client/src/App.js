@@ -16,23 +16,23 @@ import UserPage from "./components/UserPage";
 
 function App() {
   return (
-    <Router>
-        {/* <div className="desktop-image">
+    <Router basename={process.env.PUBLIC_URL}>
+      {/* <div className="desktop-image">
           <img
             src={fruitsDesktop1x}
             srcSet={`${fruitsDesktop2x} 2x, ${fruitsDesktop3x} 3x,${fruitsDesktop4x} 4x,`}
             alt="fruits for desktop image"
             className="fruits-desktop"
           /> */}
-        <Header />
+      <Header />
 
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
-          <Route path="/userpage" element={<UserPage />} />
-        </Routes>
-        {/* </div> */}
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/userpage" element={<UserPage />} />
+      </Routes>
+      {/* </div> */}
     </Router>
   );
 }

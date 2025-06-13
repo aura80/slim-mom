@@ -1,4 +1,4 @@
-import '../config';
+import { apiUrl } from '../config';
 
 const token = localStorage.getItem("token");
 

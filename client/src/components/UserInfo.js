@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { logoutUser } from "../utils/api";
 // import HomePage from "../pages/HomePage";
-import '../config';
+import { apiUrl } from '../config';
 import "../pages/HomePage.css";
 import "./UserInfo.css";
 

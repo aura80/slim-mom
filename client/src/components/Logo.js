@@ -21,7 +21,7 @@ const Logo = () => {
             className="logo-image"
           />
           <div className="logo-text">
-            <Link to={"/"}>
+            {/* <Link to={"/"}> */}
               <img
                 src={`${process.env.PUBLIC_URL}/assets/logo-slim.svg`}
                 // src={"/slim-mom/assets/logo-slim.svg"}
@@ -34,7 +34,7 @@ const Logo = () => {
                 alt="Mom Logo Right"
                 className="logo-mom"
               />
-            </Link>
+            {/* </Link> */}
           </div>
         </div>
       </Link>

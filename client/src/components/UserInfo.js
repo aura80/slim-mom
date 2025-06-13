@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { logoutUser } from "../utils/api";
 // import HomePage from "../pages/HomePage";
+import { apiUrl } from '../config';
 import "../pages/HomePage.css";
 import "./UserInfo.css";
 
@@ -44,7 +45,7 @@ const UserInfo = () => {
 
 
           const response = await fetch(
-            `${process.env.REACT_APP_API_URL}/api/daily-intake/summary?weight=${weight}&height=${height}&age=${age}&bloodGroup=${bloodGroup}&date=${date}`,
+            `${apiUrl}/api/daily-intake/summary?weight=${weight}&height=${height}&age=${age}&bloodGroup=${bloodGroup}&date=${date}`,
             {
               headers: {
                 Authorization: token ? `Bearer ${token}` : undefined,

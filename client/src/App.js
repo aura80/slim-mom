@@ -13,7 +13,6 @@ import UserPage from "./components/UserPage";
 // import fruitsDesktop2x from "./assets/fruits-desktop@2x.png";
 // import fruitsDesktop3x from "./assets/fruits-desktop@3x.png";
 // import fruitsDesktop4x from "./assets/fruits-desktop@4x.png";
-// import './pages/HomePage.css';
 
 function App() {
   return (

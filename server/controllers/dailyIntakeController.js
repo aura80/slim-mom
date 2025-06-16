@@ -107,7 +107,7 @@ exports.addDailyEntry = async (req, res) => {
     if (!productId || !quantity || !date) {
       return res
         .status(400)
-        .json({ message: "Product ID, quantity, and date are required" });
+        .json({ message: "+Product ID, quantity, and date are required" });
     }
 
     await addDailyEntry(userId, date, productId, quantity);
@@ -305,7 +305,7 @@ exports.addConsumedProduct = async (req, res) => {
     if (!productId || !quantity || !date) {
       return res
         .status(400)
-        .json({ message: "Product ID, quantity, and date are required" });
+        .json({ message: "++Product ID, quantity, and date are required" });
     }
 
     const product = await Product.findById(productId);
@@ -341,20 +341,23 @@ exports.addConsumedProduct = async (req, res) => {
 
 exports.removeConsumedProduct = async (req, res) => {
     try {
-        const { productId, quantity, date } = req.body;
+        const { consumedProductId, date } = req.query;
         const userId = req.user.id;
 
-        if (!productId || !quantity || !date) {
-            return res.status(400).json({ message: "Product ID, quantity, and date are required" });
+        if (!consumedProductId || !date) {
+          return res
+            .status(400)
+            .json({ message: "Consumed product ID, and date are required" });
         }
 
         const entry = await DailyEntry.findOne({ userId, date });
 
         if (!entry) {
-            return res.status(400).json({ message: "No entry found for this date" });
+          return res.status(400).json({ message: "No entry found for this date" });
         }
 
-        entry.consumedProducts = entry.consumedProducts.filter(product => product.productId.toString() !== productId || product.quantity !== quantity);
+        entry.consumedProducts = entry.consumedProducts.filter(product => product._id.toString() !== consumedProductId);
+      
         await entry.save();
 
         res.status(200).json({ message: "Product removed successfully!" });
@@ -363,6 +366,3 @@ exports.removeConsumedProduct = async (req, res) => {
         res.status(500).json({ message: "Server error - at removing consumed product", error: error.message });
     }
 };
-
-
-

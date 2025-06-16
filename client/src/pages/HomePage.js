@@ -21,6 +21,7 @@ import { useNavigate } from 'react-router-dom';
 // import fruitsDesktop3x from "../assets/fruits-desktop@3x.png";
 // import fruitsDesktop4x from "../assets/fruits-desktop@4x.png";
 import { AuthContext } from "../context/AuthContext";
+import Header from "../components/Header";
 import Modal from "../components/Modal";
 import "./HomePage.css";
 
@@ -182,6 +183,7 @@ const HomePage = () => {
           className="strawberry-image"
         />
       </div>
+
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <h2 className="intake">Your recommended daily calorie intake is</h2>
         {bmr !== null ? (
@@ -193,7 +195,7 @@ const HomePage = () => {
         ) : (
           <p className="valid">Please enter valid values.</p>
         )}
-        <div className="horizontal-line"></div>
+        <div className="horizontal-line">.</div>
         <div className="modal-foods">
           <h3 className="noteat">Foods you should not eat</h3>
           <ol>

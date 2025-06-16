@@ -1,10 +1,3 @@
-@media (min-width: 768px) {
-    .tablet-image {
-        /* display: none; */
-    }
-
-}
-
 @media (min-width: 1024px) {
     .user-desktop-diary {
         display: flex;
@@ -21,10 +14,4 @@
         text-transform: uppercase;
         color: #9B9FAA;
     }
-    .fruits-desktop {
-        /* display: none; */
-    }
-    /* .grey-tablet-login {
-        display: none;
-    } */
 }

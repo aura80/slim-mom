@@ -1,7 +1,6 @@
 .user-info {
     display: flex;
     flex-direction: column;
-    /* margin: 0; */
 }
 
 .username {
@@ -54,7 +53,8 @@
     position: relative;
     background-color: white;      /*    red;    */
     width: 100%;
-    height: 150px;
+    height: auto;
+    /* margin-top: 48px; */
     z-index: 989999;
 }
 
@@ -90,11 +90,44 @@
     letter-spacing: 4%;
 }
 
+.desktop-leafs {
+    display: none;
+}
+
+.desktop-tablet-leafs {
+    display: none;
+}
+
+.food-kcal {
+    overflow: visible;
+    /* max-height: 330px; */
+
+}
+
+.kcal-plan span {
+    display: block;
+    /* margin-bottom: 10px; */
+}
+
+.not-rec {
+    height: 96px;
+    width: 350px;
+    border: 1px solid #E0E0E0;
+    /* gap: 10px; */
+    overflow-y: auto;
+    background-color: #F0F1F3;
+}
+
+.not-rec span {
+    margin-bottom: 10px;
+    /* margin-left: 1px; */
+}
+
 @media (max-width: 767px) {
     .summary-food {
-        position: absolute;
+        position:absolute;
         left: 0;
-        top: 100%;
+        top: auto;
         right: 0;
         width: 100%;
         z-index: 999999;
@@ -113,7 +146,8 @@
         position: relative;
         background-color: white;      /*    red;    */
         width: 100%;
-        height: 150px;
+        height: auto;
+        /* margin-top: 48px; */
         z-index: 989999;
     }
     .summary-food {
@@ -133,13 +167,26 @@
     .summary-food {
         position: absolute;
         left: 0;
-        top: 100%;
+        top: auto;
         right: 0;
         width: 100%;
         z-index: 999999;
         display: flex;
         flex-direction: column;
         background-color: #F0F1F3;
+    }
+    .desktop-tablet-leafs {
+        display: block;
+        position: absolute;
+        background-color: transparent;
+        bottom: 0;
+        right: 0;
+        left: auto;
+        width: 60%;
+        object-fit: cover;
+        /* z-index: 30000000; */
+        pointer-events: none;
+        z-index: -1;
     }
 }
 .overlay {
@@ -163,7 +210,6 @@
         display: flex;
         flex-direction: column;
         padding-top: 140px;
-        /* background-color: red; */
     }
     .grey-tablet-login {
         display: none;
@@ -176,14 +222,34 @@
         margin: 0;
         height: auto;
         width: 100%;
-        row-gap: 60px;
+        row-gap: 50px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         z-index: 9000000;
-        /* background-color: greenyellow; */
-        margin-top: 200px;
+        margin-top: 100px;  /*200*/
+    }
+    .summary-food{
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99990000;
+        background-color: #F0F1F3;
+        width: 50vw;
+        height: 100%;   /*vh*/
+        min-width: unset;
+        max-width: 42vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .summary-fo {
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        align-items: center;
     }
     .form-desktop-position {
         position: static;
@@ -196,21 +262,6 @@
         height: 100vh;
         min-height: 100vh;
     }
-    .summary-food{
-        position: fixed;
-        top: 0;
-        right: 0;
-        z-index: 99990000;
-        background-color: #F0F1F3;
-        width: 50vw;
-        height: 100vh;
-        min-width: unset;
-        max-width: 42vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
     .main-content.desktop-position{
         position: relative;
         width: 100vw;
@@ -220,21 +271,11 @@
         display: flex;
         flex-direction: row;
         align-items: stretch;
-        /* background-color: orchid; */
-    }
-    .cta-button {
-        /* margin-left: 343px; */
     }
     .main-content {
         margin: 0 0 0 0;
         padding-top: 0;
         padding-right: 0;
-    }
-    .summary-fo {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
     }
     .overlay.name {
         height: 140px;
@@ -242,10 +283,6 @@
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
-        /* background-color: orchid; */
-    }
-    .summary-text.nm {
-        /* margin-top: 200px; */
     }
     .usernm  {
         font-family: Verdana;
@@ -276,4 +313,27 @@
         cursor: pointer;
         color: #9B9FAA;
     }    
+    .desktop-leafs {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 40%;
+        height: 100vh;
+        object-fit:fill;
+        z-index: 30000000;
+        pointer-events: none;
+    }
+    .desktop-tablet-leafs {
+        display: none;
+    }
+    .not-rec {
+        height: 110px;
+        width: 200px;
+        margin-bottom: auto;    /**/
+        border: 1px solid #E0E0E0;
+        /* gap: 10px; */
+        overflow-y: auto;
+        background-color: #F0F1F3;
+    }
 }

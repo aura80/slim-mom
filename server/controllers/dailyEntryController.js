@@ -2,10 +2,21 @@ const DailyEntry = require('../models/DailyEntry');
 
 exports.createDailyEntry = async (req, res) => {
     try {
+        console.log("+++++++++++Request body: ", req.body);
         const { date, productId, quantity } = req.body;
         const userId = req.user.id;
 
+        if (!date) {
+          return res.status(400).json({ message: "Date is required" });
+        }
+        if (!productId || !quantity) {
+          return res
+            .status(400)
+            .json({ message: "ProductId and quantity are required" });
+        }
+
         let dailyEntry = await DailyEntry.findOne({ userId, date });
+
         if (!dailyEntry) {
             dailyEntry = new DailyEntry({ userId, date, consumedProducts: [] });
         }

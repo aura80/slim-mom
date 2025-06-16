@@ -2,7 +2,6 @@ import React, { useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { logoutUser } from "../utils/api";
-// import HomePage from "../pages/HomePage";
 import { apiUrl } from '../config';
 import "../pages/HomePage.css";
 import "./UserInfo.css";
@@ -10,12 +9,13 @@ import "./UserInfo.css";
 
 const UserInfo = () => {
   const { user, logout } = useContext(AuthContext);
+  const [hasNavigated, setHasNavigated] = useState(false);
+
 
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
   const [age, setAge] = useState("");
   const [bloodGroup, setBloodGroup] = useState("1");
-  // const [date, setDate] = useState(null);
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
 
@@ -33,16 +33,14 @@ const UserInfo = () => {
 
   const [year, month, day] = new Date().toISOString().slice(0, 10).split("-");
 
+
   useEffect(() => {
     if (height && weight && age && bloodGroup) {
       const fetchSummary = async () => {
         try {
           const today = new Date();
-          // const date = today.toISOString().split("T")[0];
           const date = today.toISOString().slice(0, 10);
-          // const [year, month, day] = date.split("-");
           const token = localStorage.getItem("token");
-
 
           const response = await fetch(
             `${apiUrl}/api/daily-intake/summary?weight=${weight}&height=${height}&age=${age}&bloodGroup=${bloodGroup}&date=${date}`,
@@ -52,6 +50,7 @@ const UserInfo = () => {
               },
             }
           );
+
           if (!response.ok) throw new Error("Failed to fetch summary");
 
           const data = await response.json();
@@ -62,16 +61,17 @@ const UserInfo = () => {
         } catch (error) {
           setResult(null);
           console.error("Error fetch", error);
-          setError("0000Error fetch");
+          setError("0000 Error fetch");
         }
       };
       fetchSummary();
     } else {
       setResult(null);
-      setError("0000 Nu exista");
+      // setError("0000 Nu exista");
     }      
   }, [height, weight, age, bloodGroup]);
   
+
   return (
     <div className="user-info">
       {user && (
@@ -83,7 +83,6 @@ const UserInfo = () => {
           </button>
         </div>
       )}
-      {/* <HomePage /> */}
 
       <main className="main-content desktop-position">
         <div className="form-desktop-position">
@@ -147,11 +146,10 @@ const UserInfo = () => {
                 onClick={async (e) => {
                   e.preventDefault();
                   if (isAuthenticated) {
-                    // navigate("/diary");
-                    // } else {
-                    // calculateBmr();
-
-                    navigate("/diary");
+                    navigate(
+                      `/diary?height=${height}&weight=${weight}&age=${age}&bloodGroup=${bloodGroup}`
+                    );
+                    setHasNavigated(true);
                   }
                 }}
               >
@@ -203,10 +201,28 @@ const UserInfo = () => {
                 <div className="food-kcal">
                   <div className="summary-text">Food not recommended</div>
                   <p className="kcal-plan txt">
-                    Your diet will be displayed here
+                    <span className="not-rec">
+                      {
+                        Array.isArray(
+                          result?.restrictedProducts
+                        ) && result?.restrictedProducts.length > 0 ? (
+                            result.restrictedProducts.map((product, index) => (
+                              <span key={index}>{product.title}</span>
+                            ))
+                        ) : (
+                            <p>000</p>
+                        )
+                      }
+                    </span>
                   </p>
                 </div>
               </div>
+              <img
+                src={`${process.env.PUBLIC_URL}/assets/diary-leafs@1x.png`}
+                srcSet={`${process.env.PUBLIC_URL}/assets/diary-leafs@2x.png 2x, ${process.env.PUBLIC_URL}/assets/diary-leafs@3x.png 3x`}
+                alt="desktop leafs"
+                className="desktop-leafs"
+              />
             </div>
           ) : (
             <div className="summary-fo">
@@ -253,6 +269,19 @@ const UserInfo = () => {
                   </p>
                 </div>
               </div>
+
+              <img
+                src={`${process.env.PUBLIC_URL}/assets/diary-leafs@1x.png`}
+                srcSet={`${process.env.PUBLIC_URL}/assets/diary-leafs@2x.png 2x, ${process.env.PUBLIC_URL}/assets/diary-leafs@3x.png 3x`}
+                alt="desktop leafs"
+                className="desktop-leafs"
+              />
+              <img
+                src={`${process.env.PUBLIC_URL}/assets/diary-tablet-leafs@1x.png`}
+                srcSet={`${process.env.PUBLIC_URL}/assets/diary-tablet-leafs@2x.png 2x, ${process.env.PUBLIC_URL}/assets/diary-tablet-leafs@3x.png 3x`}
+                alt="desktop leafs"
+                className="desktop-tablet-leafs"
+              />
             </div>
           )}
         </div>

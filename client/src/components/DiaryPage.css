@@ -1,0 +1,124 @@
+.diary-view {
+    margin-top: 40px;
+    padding-bottom: 55px;
+}
+
+.diary-form {
+    margin-bottom: 50px;
+}
+
+.diary-date {
+    margin-bottom: 55px;
+    font-family: Verdana;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #212121;
+    border: none;
+}
+
+.diary-choose {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.diary-select {
+    width: 240px;
+    border: none;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 20px 0;
+    margin-right: 22px;
+    color: #9B9FAA;
+    font-family: Verdana;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 4%;
+}
+
+.diary-select.grams  {
+    width: 106px;
+    text-align: right;
+}
+
+.diary-select.grams::placeholder {
+    color: #9B9FAA;
+}
+
+.diary-plus-btn {
+    width: 40px;
+    height: 40px;
+    background-color: #FC842D;
+    color: white;
+    font-weight: 900;
+    font-size: 20px;
+    margin-left: 65px;   /*87 total*/
+    border-radius: 50%;
+    border: none;
+}
+
+.diary-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 22px;
+    justify-content: start;
+    max-width: 700px;
+    max-height: 400px;
+    overflow-y: auto;
+    margin-left: 0;
+}
+
+.diary-row {
+    display: contents;
+}
+
+.diary-cell {
+    padding: 8px 0;
+    font-family: Verdana;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 4%;
+    text-align: left;
+    color: #212121;
+}
+
+.title-elem {
+    border-bottom: 1px solid #9B9FAA;
+    max-width: 240px;
+    padding: 20px 0;
+}
+
+.gram-elem {
+    border-bottom: 1px solid #9B9FAA;
+    width: 106px;
+    text-align: right;
+    padding: 20px 0;
+}
+
+.kcal-elem {
+    border-bottom: 1px solid #9B9FAA;
+    width: 106px;
+    text-align: right;
+    padding: 20px 0;
+}
+
+.diary-x {
+    border-radius: 50%;
+    color: #9B9FAA;
+    background-color: transparent;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border: none;
+    padding: 20px 0 20px 10px;
+}
+
+
+@media (min-width: 1024px) {
+    .diary-grid {
+        max-width: 900px;
+    }
+}

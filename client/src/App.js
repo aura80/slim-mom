@@ -9,6 +9,7 @@ import HomePage from './pages/HomePage';
 import LoginPage from './components/LoginPage';
 import RegisterPage from "./components/RegisterPage";
 import UserPage from "./components/UserPage";
+import DiaryPage from './components/DiaryPage';
 // import fruitsDesktop1x from "./assets/fruits-desktop@1x.png";
 // import fruitsDesktop2x from "./assets/fruits-desktop@2x.png";
 // import fruitsDesktop3x from "./assets/fruits-desktop@3x.png";
@@ -31,6 +32,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/userpage" element={<UserPage />} />
+        <Route path="/diary" element={<DiaryPage />} />
       </Routes>
       {/* </div> */}
     </>

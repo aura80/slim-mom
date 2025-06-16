@@ -22,7 +22,6 @@ app.use(
     origin: [
       "http://localhost:3000",
       "https://aura80.github.io/slim-mom",
-      "https://slim-mom-qnmn.onrender.com/",
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],

@@ -9,7 +9,7 @@ import "./UserInfo.css";
 
 const UserInfo = () => {
   const { user, logout } = useContext(AuthContext);
-  const [hasNavigated, setHasNavigated] = useState(false);
+  const [, setHasNavigated] = useState(false);
 
 
   const [height, setHeight] = useState("");

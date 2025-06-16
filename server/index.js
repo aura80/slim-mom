@@ -20,9 +20,7 @@ const app = express();
 app.use(
   cors({
     origin: [
-      // process.env.FRONTEND_URL,
       "http://localhost:3000",
-      // "https://aura80.github.io",
       "https://aura80.github.io/slim-mom",
       "https://slim-mom.up.railway.app",
     ],
@@ -41,9 +39,7 @@ app.use('/api/journal', journalRoutes);
 app.use('/api/daily-intake', dailyIntakeRoutes);
 
 // Define the port
-const PORT = process.env.PORT || 5000;
-// Define the MongoDB URI
-// const MONGO_URI = process.env.MONGO_URI;  //  || 'mongodb://localhost:27017/slim-mom'
+const PORT = process.env.PORT || 8080;
 
 // Connect to MongoDB
 mongoose.connect(MONGO_URI)

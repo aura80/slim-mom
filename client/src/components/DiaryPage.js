@@ -7,7 +7,6 @@ import { logoutUser } from "../utils/api";
 import "../pages/HomePage.css";
 import "./UserInfo.css";
 import "./DiaryPage.css";
-import { date } from "yup";
 
 
 const DiaryPage = () => {
@@ -45,8 +44,6 @@ const DiaryPage = () => {
 
   const navigate = useNavigate();
 
-
-  const [year, month, day] = new Date().toISOString().slice(0, 10).split("-");
 
   useEffect(() => {
     if (!isAuthenticated) {

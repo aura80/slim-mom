@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "./Modal.css";
-import Header from "./Header";
 
 // import CloseArrow from "../assets/arrow.svg";
 // import XIcon from "../assets/X.svg";

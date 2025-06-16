@@ -21,7 +21,6 @@ import { useNavigate } from 'react-router-dom';
 // import fruitsDesktop3x from "../assets/fruits-desktop@3x.png";
 // import fruitsDesktop4x from "../assets/fruits-desktop@4x.png";
 import { AuthContext } from "../context/AuthContext";
-import Header from "../components/Header";
 import Modal from "../components/Modal";
 import "./HomePage.css";
 

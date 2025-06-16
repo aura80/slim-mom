@@ -29,13 +29,15 @@ app.use(
   })
 );
 
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://aura80.github.io/slim-mom",
+];
+
 app.use((req, res, next) => {
-  const allowedOrigins = [
-    "http://localhost:3000",
-    "https://aura80.github.io/slim-mom",
-  ];
-  if (allowedOrigins.includes(req.headers.origin)) {
-    res.header("Access-Control-Allow-Origin", req.headers.origin);
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.header("Access-Control-Allow-Origin", origin);
   }
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
   res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
@@ -43,6 +45,17 @@ app.use((req, res, next) => {
   next();
 });
 
+// middleware for preflight OPTIONS - requests
+app.options("*", (req, res) => {
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.header("Access-Control-Allow-Origin", origin);
+  }
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.header("Access-Control-Allow-Credentials", "true");
+  res.sendStatus(204);
+});
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

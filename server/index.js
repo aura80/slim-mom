@@ -24,6 +24,7 @@ app.use(
       "http://localhost:3000",
       // "https://aura80.github.io",
       "https://aura80.github.io/slim-mom",
+      "https://slim-mom.up.railway.app",
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
@@ -60,4 +61,6 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
-app.listen(PORT, () => console.log(`🚀 Server is running on http://localhost:${PORT}`));
+app.listen(PORT, "0.0.0.0", () =>
+  console.log(`🚀 Server is running on http://localhost:${PORT}`)
+);

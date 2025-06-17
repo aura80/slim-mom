@@ -1,11 +1,16 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from "react-redux";
 import { AuthContext } from "../context/AuthContext";
 import Modal from "../components/Modal";
+import Loader from "../components/Loader";
 import "./HomePage.css";
 
 
 const HomePage = () => {
+  const dispatch = useDispatch();
+  const loading = useSelector(state => state.loader.loading);
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
@@ -16,6 +21,11 @@ const HomePage = () => {
 
   const navigate = useNavigate();
 
+  useEffect(() => {
+    dispatch({ type: "LOADING_START" });
+    setTimeout(() => dispatch({ type: "LOADING_END" }), 1600);
+  }, [dispatch]);
+
   const calculateBmr = () => {
     if (weight && height && age) {
       const result = 10 * weight + 6.25 * height - 5 * age - 161;
@@ -25,6 +35,7 @@ const HomePage = () => {
 
   return (
     <div className="home-page">
+      {loading && <Loader />}
       <div className="header-container"></div>
       <main className="main-content">
         <h1>Calculate your daily calorie intake right now</h1>

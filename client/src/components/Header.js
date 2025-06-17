@@ -63,7 +63,6 @@ const Header = () => {
               <button className="burger-btn" onClick={handleBurgerClick}>
                 <img
                   src={`${process.env.PUBLIC_URL}/assets/burger.svg`}
-                  // src={"/slim-mom/assets/burger.svg"}
                   alt="Burger Button"
                   className="burger"
                 />
@@ -82,7 +81,7 @@ const Header = () => {
                   onClick={async () => {
                     await fetch("/logout", {
                       method: "POST",
-                      credentials: "include",
+                      // credentials: "include",
                     });
                     setMenuOpen(false);
                     logout();

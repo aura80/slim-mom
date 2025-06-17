@@ -67,7 +67,6 @@ const UserInfo = () => {
       fetchSummary();
     } else {
       setResult(null);
-      // setError("0000 Nu exista");
     }      
   }, [height, weight, age, bloodGroup]);
   

@@ -31,6 +31,7 @@ userSchema.pre('save', async function (next) {
         next(error);
     }
 });
+
 // Method to compare passwords
 userSchema.methods.comparePassword = async function (candidatePassword) {
     try {
@@ -42,5 +43,5 @@ userSchema.methods.comparePassword = async function (candidatePassword) {
 
 // Create the User model
 const User = mongoose.model('User', userSchema);
-// Export the User model
+
 module.exports = User;

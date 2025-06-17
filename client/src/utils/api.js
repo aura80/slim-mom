@@ -1,4 +1,3 @@
-// import { apiUrl } from '../config';
 const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000";
 
 const API_LOGIN_URL = `${apiUrl}/api/auth`;

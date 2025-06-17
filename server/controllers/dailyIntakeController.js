@@ -1,4 +1,3 @@
-const DailyIntake = require('../models/DailyIntake');
 const DailyEntry = require('../models/DailyEntry');
 const Product = require('../models/Product');
 
@@ -32,9 +31,6 @@ const getRestrictedProductsByBloodGroup = async (bloodGroup) => {
         const restrictedProducts = await Product.find({
           categories: { $in: restrictedCategories },
         }).select("_id title calories");
-        // const restrictedProducts = await Product.find({
-        //   [`groupBloodNotAllowed.${bloodGroup}`]: { $eq: true }, // $eq operator ensures we match true values - exact compare
-        // });
 
         if (!restrictedProducts.length) {
           console.warn(
@@ -280,8 +276,6 @@ exports.getDailySummary = async (req, res) => {
         const percentage = consumed > 0 ? ((consumed / dailyRate) * 100).toFixed(2) : 0;
         const restrictedProducts = await getRestrictedProductsByBloodGroup(bloodGroup);
 
-        // console.log("Restricted products: ", restrictedProducts);
-
         res.status(200).json({
             userId,
             date,    
@@ -366,3 +360,4 @@ exports.removeConsumedProduct = async (req, res) => {
         res.status(500).json({ message: "Server error - at removing consumed product", error: error.message });
     }
 };
+

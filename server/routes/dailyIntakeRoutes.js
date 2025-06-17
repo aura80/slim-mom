@@ -12,8 +12,6 @@ const authMiddleware = require('../middlewares/authMiddleware');
 
 const router = express.Router();
 
-// router.use(authMiddleware);
-
 router.get('/summary', authMiddleware, getDailySummary);
 router.get('/restricted-categories', authMiddleware, getCategorizedRestrictedCategories);
 router.get('/restricted-titles', authMiddleware, getRestrictedProductsByBloodGroupAndTitle);

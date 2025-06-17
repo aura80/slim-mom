@@ -1,30 +1,16 @@
-// import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-// import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import HomePage from './pages/HomePage';
-// import Loader from './components/Loader';
 import LoginPage from './components/LoginPage';
 import RegisterPage from "./components/RegisterPage";
 import UserPage from "./components/UserPage";
 import DiaryPage from './components/DiaryPage';
-// import fruitsDesktop1x from "./assets/fruits-desktop@1x.png";
-// import fruitsDesktop2x from "./assets/fruits-desktop@2x.png";
-// import fruitsDesktop3x from "./assets/fruits-desktop@3x.png";
-// import fruitsDesktop4x from "./assets/fruits-desktop@4x.png";
 
 function App() {
   return (
     <>
-      {/* <div className="desktop-image">
-          <img
-            src={fruitsDesktop1x}
-            srcSet={`${fruitsDesktop2x} 2x, ${fruitsDesktop3x} 3x,${fruitsDesktop4x} 4x,`}
-            alt="fruits for desktop image"
-            className="fruits-desktop"
-          /> */}
       <Header />
 
       <Routes>
@@ -34,7 +20,6 @@ function App() {
         <Route path="/userpage" element={<UserPage />} />
         <Route path="/diary" element={<DiaryPage />} />
       </Routes>
-      {/* </div> */}
     </>
   );
 }

@@ -41,7 +41,7 @@
 
 .burger-menu {
     position: absolute;
-    top: 100%;  /* sub burger */
+    top: 100%;  /* under burger */
     right: 0;
     background: #fff;
     border: 1px solid #ccc;

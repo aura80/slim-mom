@@ -1,10 +1,7 @@
 import React, { useContext, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import Logo from "./Logo";
-// import Navigation from "./Navigation";
-// import burger from "../assets/burger.svg";
 import { AuthContext } from "../context/AuthContext";
-// import { logout } from "../context/AuthContext";
 import { logoutUser } from "../utils/api";
 import "./Header.css";
 
@@ -13,7 +10,6 @@ const Header = () => {
     const { user } = useContext(AuthContext);
     const [menuOpen, setMenuOpen] = useState(false);
 
-    // const location = useLocation();
     const navigate = useNavigate();
     
     const handleBurgerClick = () => {
@@ -121,9 +117,6 @@ const Header = () => {
             </div>
           )}
         </div>
-
-        {/* {isAuthenticated && <UserInfo />}
-        {isAuthenticated && <Navigation />} */}
       </header>
     );
 };

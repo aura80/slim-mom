@@ -1,9 +1,6 @@
 import React, { useEffect } from "react";
 import "./Modal.css";
 
-// import CloseArrow from "../assets/arrow.svg";
-// import XIcon from "../assets/X.svg";
-
 const Modal = ({ isOpen, onClose, children }) => {
     useEffect(() => {
         const handleEscape = (event) => {
@@ -39,7 +36,6 @@ const Modal = ({ isOpen, onClose, children }) => {
       }}
     >
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        {/* <div className="header-container-modal"></div> */}
         <div className="arrow-container">
           <img
             src={`${process.env.PUBLIC_URL}/assets/arrow.svg`}

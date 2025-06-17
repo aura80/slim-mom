@@ -75,34 +75,31 @@
 }
 
 .diary-cell {
-    padding: 8px 0;
     font-family: Verdana;
     font-weight: 400;
     font-size: 14px;
-    line-height: 100%;
-    letter-spacing: 4%;
+    line-height: 1.9;
+    letter-spacing: normal;
     text-align: left;
     color: #212121;
+    padding: 20px 0;
 }
 
 .title-elem {
     border-bottom: 1px solid #9B9FAA;
-    max-width: 240px;
-    padding: 20px 0;
+    max-width: 240px;   
 }
 
 .gram-elem {
     border-bottom: 1px solid #9B9FAA;
     width: 106px;
     text-align: right;
-    padding: 20px 0;
 }
 
 .kcal-elem {
     border-bottom: 1px solid #9B9FAA;
     width: 106px;
     text-align: right;
-    padding: 20px 0;
 }
 
 .diary-x {
@@ -116,6 +113,66 @@
     padding: 20px 0 20px 10px;
 }
 
+@media (max-width: 767px) {
+    .diary-view {
+        max-width: 300px;
+        margin-top: 20px;
+        padding-bottom: 75px;
+    }
+    .diary-date {
+        margin-bottom: 30px;
+        font-size: 18px;
+        vertical-align: middle;
+    }
+    .diary-select {
+        width: 135px;
+        padding: 8px 0;
+        margin-right: 8px;   
+        border-bottom: 1px solid #E0E0E0;
+        padding: 8px 0;
+        font-size: 10px;
+    }
+    .diary-select.grams  {
+        width: 50px;
+        margin-right: 8px;  
+        border-bottom: 1px solid #E0E0E0;
+        padding: 8.7px 0;
+        font-size: 10px;
+    }
+    .diary-plus-btn {
+        width: 25px;
+        height: 25px;
+        margin-left: 28px;
+        font-weight: 900;
+        font-size: 14px;
+    }
+    .diary-grid {
+        column-gap: 8px;
+        max-width: 300px;
+        max-height: 200px;
+    }    
+    .diary-cell {
+        padding: 8px 0;
+        font-size: 12px;
+    }
+    .title-elem {
+        width: 110px;
+    }
+    .gram-elem {
+        width: 40px;
+    }
+    .kcal-elem {
+        width: 55px;
+    }
+    .diary-x {
+        font-size: 12px;
+        padding: 20px 0 20px 9px;
+    }
+}
+
+@media (min-width: 768px) {
+
+}
 
 @media (min-width: 1024px) {
     .diary-grid {
@@ -123,6 +180,3 @@
     }
 }
 
-@media (max-width: 767px) {
-    
-}

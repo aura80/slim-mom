@@ -37,7 +37,6 @@
 }
 
 .modal-user-overlay {
-    /* position: fixed; */
     top: 0;
     right: 0;
     width: 100vw;
@@ -54,7 +53,6 @@
     background-color: white;      /*    red;    */
     width: 100%;
     height: auto;
-    /* margin-top: 48px; */
     z-index: 989999;
 }
 
@@ -100,27 +98,22 @@
 
 .food-kcal {
     overflow: visible;
-    /* max-height: 330px; */
-
 }
 
 .kcal-plan span {
     display: block;
-    /* margin-bottom: 10px; */
 }
 
 .not-rec {
     height: 96px;
     width: 350px;
     border: 1px solid #E0E0E0;
-    /* gap: 10px; */
     overflow-y: auto;
     background-color: #F0F1F3;
 }
 
 .not-rec span {
     margin-bottom: 10px;
-    /* margin-left: 1px; */
 }
 
 @media (max-width: 767px) {
@@ -147,7 +140,6 @@
         background-color: white;      /*    red;    */
         width: 100%;
         height: auto;
-        /* margin-top: 48px; */
         z-index: 989999;
     }
     .summary-food {
@@ -184,7 +176,6 @@
         left: auto;
         width: 60%;
         object-fit: cover;
-        /* z-index: 30000000; */
         pointer-events: none;
         z-index: -1;
     }
@@ -267,7 +258,6 @@
         width: 100vw;
         max-width: 100vw;
         height: 100vh;
-        /* box-sizing: border-box; */
         display: flex;
         flex-direction: row;
         align-items: stretch;
@@ -330,9 +320,8 @@
     .not-rec {
         height: 110px;
         width: 200px;
-        margin-bottom: auto;    /**/
+        margin-bottom: auto;
         border: 1px solid #E0E0E0;
-        /* gap: 10px; */
         overflow-y: auto;
         background-color: #F0F1F3;
     }

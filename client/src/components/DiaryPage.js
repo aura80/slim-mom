@@ -155,13 +155,11 @@ const DiaryPage = () => {
           setError(null);
         } catch (error) {
           setResult(null);
-          // console.error("Error fetch", error);
         }
       };
       fetchSummary();
     } else {
       setResult(null);
-      // setError("0000 Nu exista");
     }
   }, [height, weight, age, bloodGroup]);
 
@@ -188,7 +186,7 @@ const DiaryPage = () => {
             <span className="username">{user.name}</span>
             <div className="vertical-user-bar"></div>
             <button className="logout-button" onClick={handleLogout}>
-              Exit 
+              Exit
             </button>
           </div>
         )}
@@ -247,7 +245,6 @@ const DiaryPage = () => {
               </form>
               {error && <p style={{ color: "red" }}>{error}</p>}
               {dailyEntry?.consumedProducts?.length > 0 && (
-                // <div>
                 <div className="diary-grid">
                   {dailyEntry?.consumedProducts.map((p) => {
                     const product = findProduct(p.productId);
@@ -277,7 +274,6 @@ const DiaryPage = () => {
                     );
                   })}
                 </div>
-                // </div>
               )}
             </div>
           </div>

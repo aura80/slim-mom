@@ -87,6 +87,12 @@ const Header = () => {
                     await fetch(`${API_URL_OUT}/logout`, {
                       method: "POST",
                       // credentials: "include",
+                      headers: {
+                        Authorization: `Bearer ${localStorage.getItem(
+                          "token"
+                        )}`,
+                        "Content-Type": "application/json",
+                      },
                     });
                     setMenuOpen(false);
                     logout();

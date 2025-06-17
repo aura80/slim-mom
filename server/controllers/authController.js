@@ -63,10 +63,7 @@ exports.register = async (req, res) => {
 };
 
 exports.logout = async (req, res) => {
-    if (!req.user) {
-        return res.status(401).json({ message: '❌ Unauthorized' });
-    }
     // Invalidate the token on the client side
     // Note: JWT tokens are stateless, so we can't invalidate them server-side.
-    res.status(200).json({ message: 'Logout successful' });
+    res.status(200).json({ message: "✅ Logout successful" });
 }

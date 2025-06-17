@@ -1,4 +1,4 @@
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import loaderReducer from "./reducers/loaderReducer";
 
 const store = configureStore({

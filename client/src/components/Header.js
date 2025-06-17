@@ -79,7 +79,12 @@ const Header = () => {
                 </NavLink>
                 <button
                   onClick={async () => {
-                    await fetch("/logout", {
+                    const API_URL_OUT =
+                      window.location.hostname === "localhost"
+                        ? ""
+                        : "https://slim-mom-qnmn.onrender.com/api/auth";
+
+                    await fetch(`${API_URL_OUT}/logout`, {
                       method: "POST",
                       // credentials: "include",
                     });
